@@ -3,6 +3,7 @@ package main
 import (
 	"casabaldini/internal/db"
 	"html/template"
+	"log"
 	"net/http"
 	"time"
 )
@@ -25,6 +26,25 @@ type Slider struct {
 	Testo   string
 }
 
+type Submenu struct {
+	ID      int
+	Codice  string
+	Radice  string
+	Livello int
+	Titolo  string
+	Link    string
+}
+
+type Menus struct {
+	ID       int
+	Codice   string
+	Radice   string
+	Livello  int
+	Titolo   string
+	Link     string
+	Submenus []Submenu
+}
+
 var templates = template.Must(template.ParseGlob("templates/*.html"))
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
@@ -35,6 +55,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		PageContent  string
 		ContentBlock string
 		Sliders      []Slider
+		Menus        []Menus
 	}
 	type Slider struct {
 		ID         int
@@ -55,8 +76,9 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		ContentBlock: "content_home",
 	}
 	Sliders, _ := GetSliders()
+	Menus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "data": data,
+		"Sliders": Sliders, "Menu": Menus, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -84,4 +106,36 @@ func GetSliders() ([]Slider, error) {
 	}
 
 	return sliders, nil
+}
+func Menu() ([]Menus, error) {
+
+	rows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo,link FROM menu WHERE livello=? AND attivo=?", 2, 1)
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var menus []Menus
+
+	for rows.Next() {
+		var m Menus
+		rows.Scan(&m.ID, &m.Codice, &m.Radice, &m.Livello, &m.Titolo, &m.Link)
+
+		subRows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo, link FROM submenu WHERE radice = ?", m.Codice)
+		if err != nil {
+
+			log.Println(err)
+			return nil, err
+		}
+		defer rows.Close()
+		for subRows.Next() {
+			var s Submenu
+			subRows.Scan(&s.ID, &s.Codice, &s.Radice, &s.Livello, &s.Titolo, &s.Link)
+			m.Submenus = append(m.Submenus, s)
+		}
+		subRows.Close()
+
+		menus = append(menus, m)
+	}
+	return menus, nil
 }
