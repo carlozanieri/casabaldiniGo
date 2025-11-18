@@ -7,7 +7,7 @@ import (
 
 	//_ "github.com/lib/pq"
 	//_ "github.com/go-sql-driver/mysql"
-	 _ "github.com/mattn/go-sqlite3" // Uncomment if you enable CGO and want sqlite
+	_ "github.com/mattn/go-sqlite3" // Uncomment if you enable CGO and want sqlite
 )
 
 func OpenDBFromEnv() (*sql.DB, error) {
@@ -32,4 +32,4 @@ func OpenDBFromEnv() (*sql.DB, error) {
 
 //MySQL: DB_DRIVER=mysql e DB_DSN=user:pass@tcp(localhost:3306)/dbname?parseTime=true
 
-SQLite: DB_DRIVER=sqlite3 e DB_DSN=./data.db (ricorda CGO)
+//SQLite: DB_DRIVER=sqlite3 e DB_DSN=./data.db (ricorda CGO)
