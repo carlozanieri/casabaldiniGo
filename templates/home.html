@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"> 
+<title>casabaldini.eu</title>
+<link rel="stylesheet" href="/static/style.css">
+
+<link rel="stylesheet" type="text/css" href="/static/home/dist/css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/static/home/dist/css/examples.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/static/menu_6/css/default.css" />
+<link rel="stylesheet" type="text/css" href="/static/menu_6/css/component.css" />
+	
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script type="text/javascript" src="/static/home/dist/js/jquery.sliderPro.min.js"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example1' ).sliderPro({
+			width: 960,
+			height: 500,
+			arrows: true,
+			buttons: false,
+			waitForLayers: true,
+			thumbnailWidth: 200,
+			thumbnailHeight: 100,
+			thumbnailPointer: true,
+			autoplay: true,
+			autoScaleLayers: false,
+			breakpoints: {
+				500: {
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
+	});
+</script>
+
+</head>
 {{ define "home" }}
   {{ template "base_top" . }}
   {{ template "content_home" . }}
@@ -5,11 +46,40 @@
 {{ end }}
 
 {{ define "content_home" }}
-<h1>Benvenuto!</h1>
-<p>Questa è la Home.</p>
-<ul>
-  {{ range .Items }}
-    <li>{{ . }}</li>
-  {{ end }}
-</ul>
-{{ end }}
+<div id="example1" class="slider-pro">
+		
+		<div class="sp-slides">
+		
+			{{range .Sliders}}
+			
+	        <div class="sp-slide">
+				
+				<img style= "width: 85%; "  src= "/static/img/{{.Codice}}/{{.Img}}" alt="" title="{{.Caption}}" />
+
+				<h3 class="sp-layer sp-black sp-padding" 
+					data-horizontal="40" data-vertical="10%" 
+					data-show-transition="left" data-hide-transition="left">
+					{{.Titolo}}
+				</h3>
+
+				<p class="sp-layer sp-white sp-padding hide-medium-screen" 
+					data-horizontal="40" data-vertical="22%" 
+					data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="400">
+					{{.Caption}}
+				</p>
+
+				<p style="background-color:#330101;" class="sp-layer sp-black sp-padding hide-small-screen" 
+					data-horizontal="40" data-vertical="34%" data-width="650" 
+					data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="500">
+					{{.Testo}}
+				</p>
+			
+			</div>
+		{{end}}		
+		</div>
+		
+	
+    </div>
+	
+{{end}}	
+</html>

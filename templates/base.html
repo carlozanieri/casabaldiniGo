@@ -1,11 +1,50 @@
 {{ define "base_top" }}
 <!DOCTYPE html>
 <html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta charset="utf-8">
-  <title>{{ .Title }}</title>
-  <link rel="stylesheet" href="/static/style.css">
-</head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"> 
+<title>casabaldini.eu</title>
+
+<link rel="stylesheet" type="text/css" href="/static/home/dist/css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/static/home/dist/css/examples.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/static/menu_6/css/default.css" />
+<link rel="stylesheet" type="text/css" href="/static/menu_6/css/component.css" />
+	
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script type="text/javascript" src="/static/home/dist/js/jquery.sliderPro.min.js"></script>
+    <meta charset="UTF-8">
+    <title>{{block "title" .}}casabaldini.eu{{end}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example1' ).sliderPro({
+			width: 960,
+			height: 500,
+			arrows: true,
+			buttons: false,
+			waitForLayers: true,
+			thumbnailWidth: 200,
+			thumbnailHeight: 100,
+			thumbnailPointer: true,
+			autoplay: true,
+			autoScaleLayers: false,
+			breakpoints: {
+				500: {
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
+	});
+</script>    
+</head >
+
 <body>
   {{ template "header" . }}
 {{ end }}

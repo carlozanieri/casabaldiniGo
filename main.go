@@ -1,12 +1,13 @@
 package main
 
 import (
+	"casabaldini/internal/db"
 	"log"
 	"net/http"
 )
 
 func main() {
-
+	db.Init()
 	// Routing semplice
 	http.HandleFunc("/", HomeHandler)
 	http.HandleFunc("/about", AboutHandler)
