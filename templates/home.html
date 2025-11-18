@@ -1,0 +1,15 @@
+{{ define "home" }}
+  {{ template "base_top" . }}
+  {{ template "content_home" . }}
+  {{ template "base_bottom" . }}
+{{ end }}
+
+{{ define "content_home" }}
+<h2>Benvenuto!</h2>
+<p>Lista:</p>
+<ul>
+  {{ range .Items }}
+    <li>{{ . }}</li>
+  {{ end }}
+</ul>
+{{ end }}

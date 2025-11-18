@@ -1,0 +1,15 @@
+{{ define "header" }}
+<header>
+  <h1>{{ .Title }}</h1>
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/contact">Contact</a>
+    {{ if .User }}
+      | <form style="display:inline" method="post" action="/logout"><button>Logout</button></form>
+    {{ else }}
+      | <a href="/login">Login</a>
+    {{ end }}
+  </nav>
+</header>
+{{ end }}
