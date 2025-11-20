@@ -1,0 +1,13 @@
+{{ define "_header_" }}
+<header style="background:#06c;color:#fff;padding:10px;">
+  <h1>{{ .Title }}</h1>
+  <nav>
+   {{range .Menus}}<p> prova </p>{{end}}
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+{{ end }}
+
+

@@ -26,7 +26,7 @@ type Slider struct {
 	Testo   string
 }
 
-type Submenu struct {
+type Submenus struct {
 	ID      int
 	Codice  string
 	Radice  string
@@ -42,7 +42,7 @@ type Menus struct {
 	Livello  int
 	Titolo   string
 	Link     string
-	Submenus []Submenu
+	Submenus []Submenus
 }
 
 var templates = template.Must(template.ParseGlob("templates/*.html"))
@@ -56,6 +56,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		ContentBlock string
 		Sliders      []Slider
 		Menus        []Menus
+		Submenus     []Submenus
 	}
 	type Slider struct {
 		ID         int
@@ -68,6 +69,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		Testo      string
 		StaticPath string
 	}
+
 	data := PageData{
 		Title:        "Home Page",
 		Items:        []string{"Uno", "Due", "Tre"},
@@ -77,8 +79,10 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders()
 	Menus, _ := Menu()
+	Submenus, _ := Menu()
+	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menu": Menus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "Submenus": Submenus, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -116,7 +120,7 @@ func Menu() ([]Menus, error) {
 	}
 	defer rows.Close()
 	var menus []Menus
-
+	var submenus []Submenus
 	for rows.Next() {
 		var m Menus
 		rows.Scan(&m.ID, &m.Codice, &m.Radice, &m.Livello, &m.Titolo, &m.Link)
@@ -128,14 +132,53 @@ func Menu() ([]Menus, error) {
 			return nil, err
 		}
 		defer rows.Close()
+
 		for subRows.Next() {
-			var s Submenu
+			var s Submenus
 			subRows.Scan(&s.ID, &s.Codice, &s.Radice, &s.Livello, &s.Titolo, &s.Link)
 			m.Submenus = append(m.Submenus, s)
+			submenus = append(submenus, s)
 		}
-		subRows.Close()
+		defer subRows.Close()
 
 		menus = append(menus, m)
+
 	}
 	return menus, nil
+}
+
+func Submenu() ([]Submenus, error) {
+
+	rows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo,link FROM menu WHERE livello=? AND attivo=?", 2, 1)
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var menus []Menus
+	var submenus []Submenus
+	for rows.Next() {
+		var m Menus
+		rows.Scan(&m.ID, &m.Codice, &m.Radice, &m.Livello, &m.Titolo, &m.Link)
+
+		subRows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo, link FROM submenu WHERE radice = ?", m.Codice)
+		if err != nil {
+
+			log.Println(err)
+			return nil, err
+		}
+		defer rows.Close()
+
+		for subRows.Next() {
+			var s Submenus
+			subRows.Scan(&s.ID, &s.Codice, &s.Radice, &s.Livello, &s.Titolo, &s.Link)
+			m.Submenus = append(m.Submenus, s)
+			submenus = append(submenus, s)
+		}
+		defer subRows.Close()
+
+		menus = append(menus, m)
+
+	}
+	return submenus, nil
 }
