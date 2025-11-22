@@ -79,7 +79,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders()
 	Menus, _ := Menu()
-	Submenus, _ := Menu()
+	Submenus, _ := Submenu()
 	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
 		"Sliders": Sliders, "Menus": Menus, "Submenus": Submenus, "data": data,
@@ -155,13 +155,13 @@ func Submenu() ([]Submenus, error) {
 		return nil, err
 	}
 	defer rows.Close()
-	var menus []Menus
+	//var menus []Menus
 	var submenus []Submenus
 	for rows.Next() {
 		var m Menus
 		rows.Scan(&m.ID, &m.Codice, &m.Radice, &m.Livello, &m.Titolo, &m.Link)
 
-		subRows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo, link FROM submenu WHERE radice = ?", m.Codice)
+		subRows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo, link FROM submenu")
 		if err != nil {
 
 			log.Println(err)
@@ -172,12 +172,11 @@ func Submenu() ([]Submenus, error) {
 		for subRows.Next() {
 			var s Submenus
 			subRows.Scan(&s.ID, &s.Codice, &s.Radice, &s.Livello, &s.Titolo, &s.Link)
-			m.Submenus = append(m.Submenus, s)
+			submenus = append(m.Submenus, s)
 			submenus = append(submenus, s)
 		}
-		defer subRows.Close()
 
-		menus = append(menus, m)
+		//submenus = append(submenus, s)
 
 	}
 	return submenus, nil

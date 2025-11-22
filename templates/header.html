@@ -28,30 +28,24 @@
              {{ range .Menus }}
                 
                 <li>
-                    
                     <a href="javascript:;">
                            
                        <span class="title">{{.Titolo}} </span>
                     
-                    {{ range .Submenus }}
-                   
-                    <span class="arrow"></span>
-                    
-                     </a>
-                      
-                    {{ end }}                          
-		            
-                     <ul>
-                        <p style="color: aliceblue;">Test</p>
-                      {{ if .Submenus }}
                         {{ range .Submenus }}
-                        <li>
-                        
-                        <a href="{{.Link}}" >{{.Titolo}}</a>
-                        </a> 
-                                                   
-                        </li>
-                       {{end}}     
+                   
+                        <span class="arrow"></span>
+                      
+                        {{ end }}                          
+		            </a>
+                    
+                    <ul>
+                        {{ if .Submenus }}
+                            {{ range .Submenus }}
+                                <li>
+                                <a href="{{.Link}}" >{{.Titolo}}</a>
+                                </li>
+                            {{end}}     
                         {{ end}} 
                     </ul>
                    
