@@ -1,18 +1,13 @@
 {{ define "header" }}
-<!--FontAwesome-->
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
-    <![endif]-->
-	
-	<!--CSS Style-->
+    
     <link href="/static/Ace-Menu/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="/static/Ace-Menu/css/ace-responsive-menu.css" rel="stylesheet" type="text/css" />
 
-    <div class="demo">    
-	    <nav>
-           
-            <div class="menu-toggle" style=" position: absolute;  top:-20px; "  >
+    <div class="demo">
+        <nav>    
+	        <div class="menu-toggle" style=" position: absolute;  margin-top:-40px; "  >
                
                 <button  type="button" id="menu-btn">
                     <span  class="icon-bar"></span> 
@@ -21,54 +16,49 @@
                 </button>
                 
             </div>
-            <!-- Responsive Menu Structure-->
-            <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
-             {{ range .Menus }}
                 
+                {{ range .Menus }}
                 <li>
+                    
                     <a href="javascript:;">
-                           
-                       <span class="title">{{.Titolo}} </span>
-                    
-                        {{ range .Submenus }}
+                        <span class="title">{{.Titolo}} </span>
+                     
                    
-                        <span class="arrow"></span>
-                      
-                        {{ end }}                          
-		            </a>
-                    
+                   
+                    </a>
+                                        
                     <ul>
-                        {{ if .Submenus }}
-                            {{ range .Submenus }}
-                                <li>
-                                <a href="{{.Link}}" >{{.Titolo}}</a>
-                                </li>
-                            {{end}}     
-                        {{ end}} 
+                        {{$codiceMenu := .Codice}}
+                        {{ range .Submenus }}
+                        {{if eq .Radice $codiceMenu}}
+                        <li>
+                            <a href="{{.Link}}" >{{.Titolo}} </a>
+                        </li>
+                        {{end}} 
+                        {{end}} 
                     </ul>
                    
                 </li>
-             {{ end }}        
+                {{ end }}      
             </ul>
            
-        </nav>
-        <!-- End of Responsive Menu -->
-        
+        </nav>  
+      
     </div>
     
-    <!--Scripts-->
+   
     <script src="/static/Ace-Menu/js/jquery-1.10.1.min.js" type="text/javascript"></script>
     <script src="/static/Ace-Menu/js/ace-responsive-menu.js" type="text/javascript"></script>
 	
-	<!--Plugin Initialization-->
+	
     <script type="text/javascript">
          $(document).ready(function () {
              $("#respMenu").aceResponsiveMenu({
-                 resizeWidth: '768', // Set the same in Media query       
-                 animationSpeed: 'fast', //slow, medium, fast
-                 accoridonExpAll: false //Expands all the accordion menu on click
+                 resizeWidth: '768',       
+                 animationSpeed: 'fast', 
+                 accoridonExpAll: false 
              });
          });
 	</script>

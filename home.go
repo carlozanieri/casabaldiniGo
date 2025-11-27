@@ -1,7 +1,7 @@
 package main
 
 import (
-	"casabaldini/internal/db"
+	"casabaldiniGo/internal/db"
 	"html/template"
 	"log"
 	"net/http"
@@ -79,7 +79,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders()
 	Menus, _ := Menu()
-	Submenus, _ := Submenu()
+	Submenus, _ := Menu()
 	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
 		"Sliders": Sliders, "Menus": Menus, "Submenus": Submenus, "data": data,

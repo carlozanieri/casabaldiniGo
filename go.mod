@@ -1,4 +1,4 @@
-module casabaldini
+module casabaldiniGo
 
 go 1.25.4
 

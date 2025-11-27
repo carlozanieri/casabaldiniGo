@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"casabaldini/internal/db"
+	"casabaldiniGo/internal/db"
 
 	"html/template"
 	"log"

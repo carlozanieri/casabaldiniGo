@@ -1,7 +1,7 @@
 package main
 
 import (
-	"casabaldini/internal/db"
+	"casabaldiniGo/internal/db"
 	"log"
 	"net/http"
 )

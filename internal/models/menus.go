@@ -1,7 +1,7 @@
 package models
 
 import (
-	"casabaldini/internal/db"
+	"casabaldiniGo/internal/db"
 )
 
 type Submenu struct {
