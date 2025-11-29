@@ -1,0 +1,71 @@
+{{ define "header" }}
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    
+    <link href="/static/Ace-Menu/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="/static/Ace-Menu/css/ace-responsive-menu.css" rel="stylesheet" type="text/css" />
+    <meta name="author" content="Carlo Zanieri" />
+	<link rel="shortcut icon" href="/static/favicon.ico'%}"/>
+	<link rel="stylesheet" type="text/css" href="/static/menu_6/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/static/news/css/styles.css"/>
+  	<script src="/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/static/nivo-slider/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/menu_6/js/modernizr.custom.js"></script>
+	<link rel="shortcut icon" href="/static/favicon.ico"/> 
+	<link rel="stylesheet" type="text/css" href="/static/menu_6/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/static/menu_6/css/component.css" />
+		
+		
+    <style>
+		.content { margin:50px auto; max-width:728px; line-height:1.7}
+    </style>
+   <div class="container demo-5">	
+			<!-- Codrops top bar -->
+			<div class="codrops-top clearfix">
+				
+				
+		</div>
+			
+			<div class="main clearfix">
+				<div class="column">
+					<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger"></button>
+						<ul class="dl-menu">
+							
+							{{ range .Menus }}
+                            {{$codiceMenu := .Codice}}
+							<li>
+								
+								<a href="{{.Link }}" class="gn-icon gn-icon-help">{{.Titolo}}</a>
+								
+								<ul class="dl-submenu">
+									
+									{{ range .Submenus }}
+                      
+									<li >
+											{{if eq .Radice $codiceMenu}}  
+                        					<a href="{{.Link}}" ><span></span> {{.Titolo}}</a>
+											<input id=".Codice" name="codice" type="hidden" value={{.Codice}} />
+											{{ end }}
+									</li>
+									{{end }}
+									
+								</ul>
+							</li>
+							{{ end}}
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+				</div>
+			</div>
+		</div><!-- /container -->
+		
+		<script src="/static/menu_6/js/jquery.dlmenu.js"></script>
+		
+		<script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-4', classout : 'dl-animate-out-4' }
+				});
+			});
+		</script>
+  {{end}}

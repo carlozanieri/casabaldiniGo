@@ -7,7 +7,7 @@
 
     <div class="demo">
         <nav>    
-	        <div class="menu-toggle" style=" position: absolute;  margin-top:-40px; "  >
+	        <div class="menu-toggle" style=" position: absolute;  margin-top:-20px; "  >
                
                 <button  type="button" id="menu-btn">
                     <span  class="icon-bar"></span> 
@@ -17,29 +17,33 @@
                 
             </div>
             
-            <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+            <ul id="respMenu" class="ace-responsive-menu" data-menu-style="vertical" >
                 
                 {{ range .Menus }}
+                {{$codiceMenu := .Codice}}
                 <li>
                     
                     <a href="javascript:;">
                         <span class="title">{{.Titolo}} </span>
-                     
-                   
-                   
-                    </a>
-                                        
-                    <ul>
-                        {{$codiceMenu := .Codice}}
-                        {{ range .Submenus }}
+                        {{range .Submenus}}
+                    
                         {{if eq .Radice $codiceMenu}}
+                            <span class="arrow"></span>
+                        {{end}}
+                    
+                    </a> 
+                        {{end}}
+                                                      
+                    <ul>
+                      {{ range .Submenus }}
+                      {{if eq .Radice $codiceMenu}}     
                         <li>
                             <a href="{{.Link}}" >{{.Titolo}} </a>
                         </li>
-                        {{end}} 
-                        {{end}} 
+                        {{end}}
+                        {{end}}  
                     </ul>
-                   
+                    
                 </li>
                 {{ end }}      
             </ul>

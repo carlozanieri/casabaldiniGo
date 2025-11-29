@@ -78,11 +78,11 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		ContentBlock: "content_home",
 	}
 	Sliders, _ := GetSliders()
-	Menus, _ := Menu()
-	Submenus, _ := Menu()
+	Menus, _ := GetMenu()
+	//Submenus, _ := []Submenus
 	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menus": Menus, "Submenus": Submenus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -111,9 +111,9 @@ func GetSliders() ([]Slider, error) {
 
 	return sliders, nil
 }
-func Menu() ([]Menus, error) {
+func GetMenu() ([]Menus, error) {
 
-	rows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo,link FROM menu WHERE livello=? AND attivo=?", 2, 1)
+	rows, err := db.DB.Query("SELECT id, codice,  radice, livello, titolo,link FROM menu WHERE livello=? AND attivo=? order by ordine", 2, 1)
 
 	if err != nil {
 		return nil, err
