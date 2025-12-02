@@ -23,8 +23,8 @@
 			arrows: true,
 			buttons: false,
 			waitForLayers: true,
-			thumbnailWidth: 200,
-			thumbnailHeight: 100,
+			thumbnailWidth: 300,
+			thumbnailHeight: 150,
 			thumbnailPointer: true,
 			autoplay: true,
 			autoScaleLayers: false,
@@ -40,9 +40,8 @@
 
 </head>
 {{ define "home" }}
-{{ template "content_home" . }}
   {{ template "base_top" . }}
-  
+  {{ template "content_home" . }}
   {{ template "base_bottom" . }}
 {{ end }}
 
