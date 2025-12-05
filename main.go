@@ -10,8 +10,9 @@ func main() {
 	db.Init()
 	// Routing semplice
 	http.HandleFunc("/", HomeHandler)
-	http.HandleFunc("/about", AboutHandler)
-	http.HandleFunc("/contact", ContactHandler)
+	http.HandleFunc("/lecamere", LecamereHandler)
+	http.HandleFunc("/lasala", LasalaHandler)
+	http.HandleFunc("/ilpaese", IlpaeseHandler)
 
 	// File statici
 	fs := http.FileServer(http.Dir("static"))
