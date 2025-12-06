@@ -46,7 +46,7 @@
 
 .dl-menuwrapper button:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 68%;
 	height: 5px;
 	background: #fff;
@@ -90,7 +90,7 @@
 
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
-	position: absolute;
+	position: relative;
 	top: 0;
 	line-height: 50px;
 	font-family: 'icomoon';
@@ -113,7 +113,7 @@
 
 .dl-menuwrapper .dl-menu {
 	margin: 5px 0 0 0;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	opacity: 0;
 	pointer-events: none;
@@ -162,7 +162,7 @@ All this is done for any sub-level being entered.
 
 /* Dynamically added submenu outside of the menu context */
 .dl-menuwrapper > .dl-submenu {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	top: 50px;
 	left: 0;

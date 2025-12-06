@@ -29,7 +29,7 @@
 }
 
 .sp-slide {
-	position: absolute;
+	position: relative;
 }
 
 .sp-image-container {
@@ -62,7 +62,7 @@
 }
 
 .sp-top-thumbnails {
-	position: absolute;
+	position: relative;
 	top: 0;
 	margin-bottom: 4px;
 }
@@ -73,7 +73,7 @@
 
 .sp-left-thumbnails,
 .sp-right-thumbnails {
-	position: absolute;
+	position: relative;
 	top: 0;
 }
 
@@ -151,14 +151,14 @@
 }
 
 .sp-right-thumbnails.sp-has-pointer .sp-thumbnail {
-	position: absolute;
+	position: relative;
 	left: 18px;
 	margin-left: 0 !important;
 }
 
 .sp-right-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	height: 100%;
 	border-left: 5px solid #F00;
 	left: 0;
@@ -168,7 +168,7 @@
 
 .sp-right-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 0;
 	height: 0;
 	left: 0;
@@ -186,13 +186,13 @@
 }
 
 .sp-left-thumbnails.sp-has-pointer .sp-thumbnail {
-	position: absolute;
+	position: relative;
 	right: 18px;
 }
 
 .sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	height: 100%;
 	border-left: 5px solid #F00;
 	right: 0;
@@ -202,7 +202,7 @@
 
 .sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 0;
 	height: 0;
 	right: 0;
@@ -220,14 +220,14 @@
 }
 
 .sp-bottom-thumbnails.sp-has-pointer .sp-thumbnail {
-	position: absolute;
+	position: relative;
 	top: 18px;
 	margin-top: 0 !important;
 }
 
 .sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 100%;
 	border-bottom: 5px solid #F00;
 	top: 0;
@@ -236,7 +236,7 @@
 
 .sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 0;
 	height: 0;
 	left: 50%;
@@ -254,13 +254,13 @@
 }
 
 .sp-top-thumbnails.sp-has-pointer .sp-thumbnail {
-	position: absolute;
+	position: relative;
 	bottom: 18px;
 }
 
 .sp-top-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 100%;
 	border-bottom: 5px solid #F00;
 	bottom: 0;
@@ -269,7 +269,7 @@
 
 .sp-top-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 0;
 	height: 0;
 	left: 50%;
@@ -283,7 +283,7 @@
 /* Layers
 --------------------------------------------------*/
 .sp-layer {
-	position: absolute;
+	position: relative;
 	margin: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -341,7 +341,7 @@
 }
 
 .sp-full-screen-button {
-	position: absolute;
+	position: relative;
 	top: 5px;
 	right: 10px;
 	font-size: 30px;
@@ -424,7 +424,7 @@
 /* Arrows
 --------------------------------------------------*/
 .sp-arrows {
-	position: absolute;
+	position: relative;
 }
 
 .sp-fade-arrows {
@@ -452,7 +452,7 @@
 }
 
 .sp-arrow {
-	position: absolute;
+	position: relative;
 	display: block;
 	width: 20px;
 	height: 30px;
@@ -501,7 +501,7 @@
 .sp-next-arrow:before,
 .sp-next-arrow:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 50%;
 	height: 50%;
 	background-color: #FFF;
@@ -585,7 +585,7 @@
 /* Thumbnail Arrows
 --------------------------------------------------*/
 .sp-thumbnail-arrows {
-	position: absolute;
+	position: relative;
 }
 
 .sp-fade-thumbnail-arrows {
@@ -615,7 +615,7 @@
 }
 
 .sp-thumbnail-arrow {
-	position: absolute;
+	position: relative;
 	display: block;
 	width: 15px;
 	height: 25px;
@@ -654,7 +654,7 @@
 .sp-next-thumbnail-arrow:before,
 .sp-next-thumbnail-arrow:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 50%;
 	height: 50%;
 	background-color: #FFF;
@@ -754,7 +754,7 @@ a.sp-video img {
 
 a.sp-video:after {
 	content: '\25B6';
-	position: absolute;
+	position: relative;
 	width: 45px;
 	padding-left: 5px;
 	height: 50px;

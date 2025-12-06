@@ -1463,7 +1463,7 @@
 				// Additional checks for Webkit
 				if ( this.supportedAnimation === 'css-3d' && typeof div.styleWebkitPerspective !== 'undefined' ) {
 					var style = document.createElement( 'style' );
-					style.textContent = '@media (transform-3d),(-webkit-transform-3d){#test-3d{left:9px;position:absolute;height:5px;margin:0;padding:0;border:0;}}';
+					style.textContent = '@media (transform-3d),(-webkit-transform-3d){#test-3d{left:9px;position:relative;height:5px;margin:0;padding:0;border:0;}}';
 					document.getElementsByTagName( 'head' )[0].appendChild( style );
 
 					div.id = 'test-3d';

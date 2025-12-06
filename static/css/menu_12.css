@@ -68,7 +68,7 @@ background: #000;
 }
 .nav li a:first-child:nth-last-child(2):before {
   content: "";
-  position: absolute;
+  position: relative;
   height: 0;
   width: 0;
   border: 5px solid transparent;
@@ -76,7 +76,7 @@ background: #000;
   right:5px;
  }
  .nav ul {
-  position: absolute;
+  position: relative;
   white-space: nowrap;
   border-bottom: 5px solid  orange;
   z-index: 1;

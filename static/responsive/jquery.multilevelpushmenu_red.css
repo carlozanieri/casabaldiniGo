@@ -1,5 +1,5 @@
 .mlpm_w {
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	min-width: 100%;
 	min-height: 100%;
@@ -8,7 +8,7 @@
 }
 
 .mlpm_w .levelHolderClass {
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	top: 0;
 	background: #ce3130;

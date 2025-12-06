@@ -1,7 +1,7 @@
 /* Thumbnail Arrows
 --------------------------------------------------*/
 .sp-thumbnail-arrows {
-	position: absolute;
+	position: relative;
 }
 
 .sp-fade-thumbnail-arrows {
@@ -31,7 +31,7 @@
 }
 
 .sp-thumbnail-arrow {
-	position: absolute;
+	position: relative;
 	display: block;
 	width: 15px;
 	height: 25px;
@@ -70,7 +70,7 @@
 .sp-next-thumbnail-arrow:before,
 .sp-next-thumbnail-arrow:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 50%;
 	height: 50%;
 	background-color: #FFF;

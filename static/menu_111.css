@@ -115,7 +115,7 @@ font-family: 'icomoon';	src:url('https://dl.dropbox.com/u/26865764/icomoon.eot')
             content: " ";
             height: 0;
             width: 0;
-            position: absolute;
+            position: relative;
             pointer-events: none;
             border-color: rgba(255, 255, 255, 0);
             border-top-color: @vlred;
@@ -127,7 +127,7 @@ font-family: 'icomoon';	src:url('https://dl.dropbox.com/u/26865764/icomoon.eot')
 
     li+ li a:before{
         content:"*";
-        position:absolute;
+        position:relative;
         left:-0.5em;
         top:0.2em;
         color:@light;
@@ -142,7 +142,7 @@ font-family: 'icomoon';	src:url('https://dl.dropbox.com/u/26865764/icomoon.eot')
         -moz-box-sizing:border-box;
         margin: 18px 0 0 -0.7em;
         padding:3px 0 0 0;
-        position: absolute;
+        position: relative;
         max-height: 0em;
         overflow: hidden;
         list-style: none outside none;
@@ -286,7 +286,7 @@ font-family: 'icomoon';	src:url('https://dl.dropbox.com/u/26865764/icomoon.eot')
             height:67px;
             width: 60px;
             display:block;
-            position:absolute;
+            position:relative;
             right:0px;
             z-index:200;
             font-size:0em;
@@ -305,7 +305,7 @@ font-family: 'icomoon';	src:url('https://dl.dropbox.com/u/26865764/icomoon.eot')
         /* arrow to indicate that we have subnav*/
          .menu .has-subnav > .toggle-link:after{
             content: "\f0d7";
-            position:absolute;
+            position:relative;
             width:50px;
             top:50%;
             margin-top:-15px;

@@ -110,14 +110,14 @@
     slideWrapperContainer.style.height = '100%';
     var slideTrackContainer = document.createElement('div');
     slideTrackContainer.className = 'slide-tracker';
-    slideTrackContainer.style.position = 'absolute';
+    slideTrackContainer.style.position = 'relative';
     slideTrackContainer.style.height = '100%';
     slideTrackContainer.style.width = ((frWidth * frItemsWidth) + pxItemsWidth + (frWidth * (wholeItemsCount - frItemsCount - pxItemsCount)) + (slide_gap * wholeItemsCount)) + 'px';
     slideTrackContainer.style.transition = 'transform ' + settings.speed + 'ms ' + settings.ease_function;
     sliderParent.children().each(function() {
       var slideItemContainer = document.createElement('div');
       slideItemContainer.className = 'slide-item';
-      slideItemContainer.style.position = 'absolute';
+      slideItemContainer.style.position = 'relative';
       slideItemContainer.style.height = '100%';
       slideItemContainer.style.width = '0';
       slideItemContainer.style.top = 0;

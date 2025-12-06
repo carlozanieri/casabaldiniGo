@@ -67,7 +67,7 @@ body {
 	background:#009900;
 	height:auto;
 	padding:10px 0;
-	position:absolute;
+	position:relative;
 	top:-115px;
 	width:180px;
 	z-index:1;

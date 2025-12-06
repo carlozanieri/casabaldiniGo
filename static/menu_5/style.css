@@ -65,7 +65,7 @@ a {
 /* Any sub menu */
 @media screen and (min-width: 650px) {
   a + ul {
-    position: absolute; }
+    position: relative; }
     a + ul:not(.js-showElement) {
       display: none; } }
 @media screen and (max-width: 650px) {
@@ -140,7 +140,7 @@ a {
       display: block; } }
 
 span#toggleMenu-text {
-  position: absolute;
+  position: relative;
   opacity: 0; }
 
 /* Second Level Dropdown */

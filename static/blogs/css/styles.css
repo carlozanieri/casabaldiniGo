@@ -117,7 +117,7 @@ h1 {
 
 .crsl-item .postdate {
   display: block;
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
   padding: 6px;

@@ -1,7 +1,7 @@
 /* Arrows
 --------------------------------------------------*/
 .sp-arrows {
-	position: absolute;
+	position: relative;
 }
 
 .sp-fade-arrows {
@@ -29,7 +29,7 @@
 }
 
 .sp-arrow {
-	position: absolute;
+	position: relative;
 	display: block;
 	width: 20px;
 	height: 30px;
@@ -78,7 +78,7 @@
 .sp-next-arrow:before,
 .sp-next-arrow:after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 50%;
 	height: 50%;
 	background-color: #FFF;

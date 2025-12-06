@@ -8,9 +8,9 @@
 	padding: 0;
 }
 
-/* Make all slides absolutes and hide them */
+/* Make all slides relatives and hide them */
 .js .pieces-slider__slide {
-	position: absolute;
+	position: relative;
 	right: 100%;
 }
 
@@ -45,7 +45,7 @@
 
 /* Navigation buttons */
 .pieces-slider__button {
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 50%;
 	width: 100px;

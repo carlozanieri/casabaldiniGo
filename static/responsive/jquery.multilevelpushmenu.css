@@ -1,5 +1,5 @@
 .multilevelpushmenu_wrapper {
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	min-width: 100%;
 	min-height: 100%;
@@ -8,7 +8,7 @@
 }
 
 .multilevelpushmenu_wrapper .levelHolderClass {
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	top: 0;
 	background: #336ca6;

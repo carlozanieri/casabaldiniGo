@@ -32,7 +32,7 @@ html, body, .container, .scroller {
 }
 
 .menu-trigger:before {
-	position: absolute;
+	position: relative;
 	top: 2px;
 	left: 0;
 	width: 40px;
@@ -49,7 +49,7 @@ html, body, .container, .scroller {
 }
 
 .mp-menu {
-	position: absolute; /* we can't use fixed here :( */
+	position: relative; /* we can't use fixed here :( */
 	top: 0;
 	left: 0;
 	z-index: 1;
@@ -61,7 +61,7 @@ html, body, .container, .scroller {
 }
 
 .mp-level {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -76,7 +76,7 @@ html, body, .container, .scroller {
 .mp-pusher::after,
 .mp-level::after,
 .mp-level::before {
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
 	width: 0;
@@ -174,7 +174,7 @@ html, body, .container, .scroller {
 }
 
 .mp-menu.mp-overlap h2::before {
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
 	margin-right: 8px;
@@ -219,7 +219,7 @@ html, body, .container, .scroller {
 }
 
 .mp-menu ul li::before {
-	position: absolute;
+	position: relative;
 	left: 10px;
 	z-index: -1;
 	color: rgba(0,0,0,0.2);
@@ -265,7 +265,7 @@ html, body, .container, .scroller {
 
 .mp-back::after {
 	font-family: 'linecons';
-	position: absolute;
+	position: relative;
 	content: "\e037";
 	right: 10px;
 	font-size: 1.3em;

@@ -18,7 +18,7 @@ nav{
   transition:$transition;
   
   .reference{
-    position:absolute;
+    position:relative;
     top:5px;
     left:0;
     height:50px;
@@ -59,7 +59,7 @@ nav{
       
       // second level
       .sub-menu{
-        position:absolute;
+        position:relative;
         z-index:-1;
         list-style-type:none;
         text-align:left;

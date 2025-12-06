@@ -51,7 +51,7 @@ header nav ul li:hover .children { display: block; }
 header nav ul li .children {
   display: none;
   background: #8e44ad;
-  position: absolute;
+  position: relative;
   width: 150%;
   z-index: 1000;
 }

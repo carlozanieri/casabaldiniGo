@@ -377,7 +377,7 @@ hr {
 }
 
 .sr-only {
-  position: absolute;
+  position: relative;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -3475,7 +3475,7 @@ input[type="button"].btn-block {
 }
 
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   z-index: 1000;
@@ -6120,7 +6120,7 @@ button.close {
 }
 
 .tooltip {
-  position: absolute;
+  position: relative;
   z-index: 1030;
   display: block;
   font-size: 12px;
@@ -6166,7 +6166,7 @@ button.close {
 }
 
 .tooltip-arrow {
-  position: absolute;
+  position: relative;
   width: 0;
   height: 0;
   border-color: transparent;
@@ -6234,7 +6234,7 @@ button.close {
 }
 
 .popover {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1010;
@@ -6285,7 +6285,7 @@ button.close {
 
 .popover .arrow,
 .popover .arrow:after {
-  position: absolute;
+  position: relative;
   display: block;
   width: 0;
   height: 0;
@@ -6407,7 +6407,7 @@ button.close {
 
 .carousel-inner > .next,
 .carousel-inner > .prev {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
 }
@@ -6434,7 +6434,7 @@ button.close {
 }
 
 .carousel-control {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
@@ -6479,7 +6479,7 @@ button.close {
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
-  position: absolute;
+  position: relative;
   top: 50%;
   z-index: 5;
   display: inline-block;
@@ -6513,7 +6513,7 @@ button.close {
 }
 
 .carousel-indicators {
-  position: absolute;
+  position: relative;
   bottom: 10px;
   left: 50%;
   z-index: 15;
@@ -6545,7 +6545,7 @@ button.close {
 }
 
 .carousel-caption {
-  position: absolute;
+  position: relative;
   right: 15%;
   bottom: 20px;
   left: 15%;

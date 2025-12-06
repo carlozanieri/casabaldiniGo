@@ -19,7 +19,7 @@
 			&:hover, &:focus {
 				&:before {
 					@include type-icon;
-					position: absolute;
+					position: relative;
 					top: 3px;
 					left: -1.25em;
 					content: '\1F517';

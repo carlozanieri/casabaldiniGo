@@ -38,7 +38,7 @@
     display: block;
 }
 .nav li  ul {
-    position: absolute;
+    position: relative;
     left: -9999px;
 }
 .nav > li.hover > ul {

@@ -83,7 +83,7 @@ nav > ul > li > a > span {
 }
 
 .hidden li > a {
-    position: absolute;
+    position: relative;
 }
 
 footer {

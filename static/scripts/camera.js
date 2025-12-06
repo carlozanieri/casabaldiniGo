@@ -469,7 +469,7 @@
 								'margin-left' : 0,
 								'margin-right' : 0,
 								'margin-top' : mTop,
-								'position' : 'absolute',
+								'position' : 'relative',
 								'visibility' : 'visible',
 								'width' : w
 							});
@@ -511,7 +511,7 @@
 								'margin-left' : mLeft,
 								'margin-right' : mLeft,
 								'margin-top' : 0,
-								'position' : 'absolute',
+								'position' : 'relative',
 								'visibility' : 'visible',
 								'width' : wT*r
 							});
@@ -554,7 +554,7 @@
 								'margin-left' : mLeft,
 								'margin-right' : mLeft,
 								'margin-top' : 0,
-								'position' : 'absolute',
+								'position' : 'relative',
 								'visibility' : 'visible',
 								'width' : wT*r
 							});
@@ -596,7 +596,7 @@
 								'margin-left' : 0,
 								'margin-right' : 0,
 								'margin-top' : mTop,
-								'position' : 'absolute',
+								'position' : 'relative',
 								'visibility' : 'visible',
 								'width' : w
 							});
@@ -687,7 +687,7 @@
 					var clone = t.clone();
 					t.remove();
 					$(imgFake).bind('click',function(){
-						if($(this).css('position')=='absolute') {
+						if($(this).css('position')=='relative') {
 							$(this).remove();
 							if(cloneSrc.indexOf('vimeo') != -1 || cloneSrc.indexOf('youtube') != -1) {
 								if(cloneSrc.indexOf('?') != -1){
@@ -705,8 +705,8 @@
 							clone.attr('src',cloneSrc+autoplay);
 							videoPresent = true;
 						} else {
-							$(this).css({position:'absolute',top:0,left:0,zIndex:10}).after(clone);
-							clone.css({position:'absolute',top:0,left:0,zIndex:9});
+							$(this).css({position:'relative',top:0,left:0,zIndex:10}).after(clone);
+							clone.css({position:'relative',top:0,left:0,zIndex:9});
 						}
 					});
 				});
@@ -833,11 +833,11 @@
 			barContainer.append('<span class="camera_bar_cont" />');
 			$('.camera_bar_cont',barContainer)
 				.animate({opacity:opts.loaderOpacity},0)
-				.css({'position':'absolute', 'left':0, 'right':0, 'top':0, 'bottom':0, 'background-color':opts.loaderBgColor})
+				.css({'position':'relative', 'left':0, 'right':0, 'top':0, 'bottom':0, 'background-color':opts.loaderBgColor})
 				.append('<span id="'+pieID+'" />');
 			$('#'+pieID).animate({opacity:0},0);
 			var canvas = $('#'+pieID);
-			canvas.css({'position':'absolute', 'background-color':opts.loaderColor});
+			canvas.css({'position':'relative', 'background-color':opts.loaderColor});
 			switch(opts.barPosition){
 				case 'left':
 					barContainer.css({right:'auto',width:opts.loaderStroke});
@@ -887,7 +887,7 @@
 					piePosition = 'right:0; bottom:0;';
 					break;
 			}
-			canvas.setAttribute("style", "position:absolute; z-index:1002; "+piePosition);
+			canvas.setAttribute("style", "position:relative; z-index:1002; "+piePosition);
 			var rad;
 			var radNew;
 	
@@ -952,7 +952,7 @@
 						var thumbUrl = $('> div', elem).eq(i).attr('data-thumb'),
 							newImg = new Image();
 						newImg.src = thumbUrl;
-						$('li.pag_nav_'+i,pagination).append($(newImg).attr('class','camera_thumb').css({'position':'absolute'}).animate({opacity:0},0));
+						$('li.pag_nav_'+i,pagination).append($(newImg).attr('class','camera_thumb').css({'position':'relative'}).animate({opacity:0},0));
 						$('li.pag_nav_'+i+' > img',pagination).after('<div class="thumb_arrow" />');
 						$('li.pag_nav_'+i+' > .thumb_arrow',pagination).animate({opacity:0},0);
 					}
@@ -1415,7 +1415,7 @@
 			while(cycle < blocks){
 				arr.push(cycle);
 				delay.push(cycle);
-				cameraCont.append('<div class="cameraappended" style="display:none; overflow:hidden; position:absolute; z-index:1000" />');
+				cameraCont.append('<div class="cameraappended" style="display:none; overflow:hidden; position:relative; z-index:1000" />');
 				var tApp = $('.cameraappended:eq('+cycle+')',target);
 				if(fx=='scrollLeft' || fx=='scrollRight' || fx=='scrollTop' || fx=='scrollBottom' || fx=='scrollHorz'){
 					selector.eq(slideI).clone().show().appendTo(tApp);

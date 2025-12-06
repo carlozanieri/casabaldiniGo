@@ -154,7 +154,7 @@ p{
 	border-radius: 6px;
 	padding: 20px;
 	float: left;
-	position: absolute;
+	position: relative;
 	bottom: 29px;
 	right: 0;
 	width:822px;

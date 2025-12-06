@@ -174,7 +174,7 @@ nav ul li ul li a {
 .menuicon  span::after, .menuicon  span::before {
     display: block;
     content: '';
-    position: absolute;
+    position: relative;
     width: 40px;
     height:3px;
     background-color: #fff;
@@ -317,7 +317,7 @@ nav ul li ul {
 nav ul li:hover ul{
 	height:auto;
 	padding-top: 14px;
-	position: absolute;
+	position: relative;
     right: 0;
 }
 

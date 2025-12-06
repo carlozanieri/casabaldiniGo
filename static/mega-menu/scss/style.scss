@@ -86,7 +86,7 @@ header {
 	&::before, &::after {
 		/* this is the arrow inside the dropdown trigger*/
 		content: '';
-		position: absolute;
+		position: relative;
 		top: 50%;
 		margin-top: -1px;
 		height: 2px;
@@ -188,7 +188,7 @@ header {
 
 	.cd-close {
 		/* 'X' close icon - mobile version only */
-		position: absolute;
+		position: relative;
 		z-index: 1;
 		right: 0;
 		top: 0;
@@ -205,7 +205,7 @@ header {
 		&::before {
 			/* this is the 'X' icon */
 			content: '';
-			position: absolute;
+			position: relative;
 			@include center;
 			height: 20px;
 			width: 2px;
@@ -236,7 +236,7 @@ header {
 	}
 
 	@include MQ(L) {
-		position: absolute;
+		position: relative;
 		top: calc(100% - 2px);
 		/* reset style*/
 		height: auto;
@@ -269,7 +269,7 @@ header {
 }
 
 .cd-dropdown-content, .cd-dropdown-content ul {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -416,7 +416,7 @@ header {
 	}
 
 	.cd-dropdown-gallery img {
-		position: absolute;
+		position: relative;
 		display: block;
 		height: 40px;
 		width: auto;
@@ -440,7 +440,7 @@ header {
 			/* item icon */
 			content:'';
 			display: block;
-			position: absolute;
+			position: relative;
 			left: 20px;
 			top: 50%;
 			margin-top: -20px;
@@ -556,7 +556,7 @@ header {
 			}
 
 			> .see-all {
-				position: absolute;
+				position: relative;
 				bottom: 20px;
 				height: 45px;
 				text-align: center;
@@ -600,7 +600,7 @@ header {
 
 			&::before {
 				/* this is the separation line in the middle of the .cd-secondary-dropdown element */
-				position: absolute;
+				position: relative;
 				content: '';
 				top: 290px;
 				left: 15px;
@@ -683,7 +683,7 @@ header {
 			}
 
 			.see-all {
-				position: absolute;
+				position: relative;
 				bottom: 0;
 				left: 0;
 				width: 100%;
@@ -846,7 +846,7 @@ header {
 	&::before, &::after {
 		/* arrow icon in CSS - for element with nested unordered lists */
 		content: '';
-		position: absolute;
+		position: relative;
 		top: 50%;
 		margin-top: -1px;
 		display: inline-block;

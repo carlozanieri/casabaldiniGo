@@ -300,7 +300,7 @@ table.position
    position:relative;
 }
 .art-box:before, .art-box:after, .art-box-body:before, .art-box-body:after {
-   position:absolute;
+   position:relative;
    top:0;
    bottom:0;
    content:' ';
@@ -348,7 +348,7 @@ table.position
    position:relative;
 }
 .art-bar:before, .art-bar:after {
-   position:absolute;
+   position:relative;
    top:0;
    bottom:0;
    content:' ';
@@ -440,7 +440,7 @@ div.art-header
 
 .art-header:after
 {
-   position: absolute;
+   position: relative;
    z-index:-1;
    display:block;
    content:' ';
@@ -457,7 +457,7 @@ div.art-header
 div.art-logo
 {
    display: block;
-   position: absolute;
+   position: relative;
    top: 20px;
    left: 0;
    margin-left: 0;
@@ -528,7 +528,7 @@ ul.art-hmenu, ul.art-hmenu ul {
 ul.art-hmenu ul
 {
    visibility: hidden;
-   position: absolute;
+   position: relative;
    z-index: 10;
    left: 0;
    top: 0;
@@ -600,7 +600,7 @@ ul.art-hmenu{
 
 /* end menu bar */
 .art-nav-outer{
-   position:absolute;
+   position:relative;
    width:100%;
 }
 
@@ -659,7 +659,7 @@ ul.art-hmenu>li>a
 
 ul.art-hmenu>li>a:before, ul.art-hmenu>li>a:after
 {
-   position: absolute;
+   position: relative;
    display: block;
    content:' ';
    top: 0;
@@ -734,7 +734,7 @@ a:hover.separator-without-submenu .r, a:hover.separator-without-submenu .l
 /* begin MenuSeparator */
 ul.art-hmenu>li:before
 {
-   position:absolute;
+   position:relative;
    display: block;
    content:' ';
    top:0;
@@ -924,7 +924,7 @@ span.art-button-wrapper.active>.art-button, span.art-button-wrapper.active>a.art
 span.art-button-wrapper>span.art-button-l, span.art-button-wrapper>span.art-button-r
 {
    display: block;
-   position: absolute;
+   position: relative;
    top: 0;
    bottom: 0;
    margin: 0;
@@ -1125,7 +1125,7 @@ ul.art-vmenu a:hover, ul.art-vmenu a.active:hover {
 
 ul.art-vmenu>li>a:before, ul.art-vmenu>li>a:after 
 {
-   position: absolute;
+   position: relative;
    display: block;
    content: ' ';
    z-index:-1;
@@ -1218,7 +1218,7 @@ ul.art-vmenu ul li li a:hover, ul.art-vmenu ul li li a:hover.active{
 ul.art-vmenu ul a:after
 {
    display: block;
-   position:absolute;
+   position:relative;
    top:8px;
    content:' ';
    width: 5px;
@@ -1811,7 +1811,7 @@ span.art-postcategoryicon:after
 
 .art-footer-body:before
 {
-   position: absolute;
+   position: relative;
    content:' ';
    z-index:-2;
    left:0;
@@ -1824,7 +1824,7 @@ span.art-postcategoryicon:after
 
 .art-footer-body .art-rss-tag-icon
 {
-   position: absolute;
+   position: relative;
    right:   -100px;
    bottom:0;
    z-index:1;

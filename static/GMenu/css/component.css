@@ -111,7 +111,7 @@
 }
 
 .gn-scroller {
-		position: absolute;
+		position: relative;
 		overflow-y: scroll;
 		width: 370px;
 		height: 100%;
@@ -205,7 +205,7 @@ input.gn-search:focus {
 }
 
 .gn-menu-main a.gn-icon-search {
-		position: absolute;
+		position: relative;
 		top: 0;
 		left: 0;
 		height: 60px;

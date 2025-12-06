@@ -31,7 +31,7 @@
       height: 0.875em;
       display: block;
       content: "";
-      position: absolute; }
+      position: relative; }
   .slicknav_menu .slicknav_no-text {
     margin: 0; }
   .slicknav_menu .slicknav_icon-bar {

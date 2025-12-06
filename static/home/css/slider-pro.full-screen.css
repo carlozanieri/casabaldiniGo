@@ -6,7 +6,7 @@
 }
 
 .sp-full-screen-button {
-	position: absolute;
+	position: relative;
 	top: 5px;
 	right: 10px;
 	font-size: 30px;

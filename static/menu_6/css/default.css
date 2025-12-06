@@ -24,7 +24,7 @@
   
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -55,7 +55,7 @@
 	}
 	
 	.flex img{
-		position:absolute;
+		position:relative;
 		top:0;
 		left: 25%;
 		right: 30%;
@@ -97,7 +97,7 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 	}
 	
 	.video iframe{
-		position:absolute;
+		position:relative;
 		top:0;
 		left: 0;
 		width:100%;
@@ -149,7 +149,7 @@ a:hover {
 
 .column:last-child:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	height: 7px;
 	background: #ffffff;
 	top: 100px;

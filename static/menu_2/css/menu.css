@@ -56,7 +56,7 @@ ol, ul {
 	padding-top:15px;
 }
 #navigation {
-	position: absolute;
+	position: relative;
 	right: 40px;
 	bottom: 0px;
 }
@@ -113,7 +113,7 @@ ul.sub-menu { /* level 2 */
 	left: 0px;
 	top: 38px;
 	padding-top: 10px;
-	position: absolute;
+	position: relative;
 	width: 150px;
 	z-index: 9999;
 }

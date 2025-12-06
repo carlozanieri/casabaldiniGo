@@ -42,7 +42,7 @@ jQuery('.stellarnav').stellarNav({
   breakpoint: 768, // number in pixels to determine when the nav should turn mobile friendly
   menuLabel: 'Menu', // label for the mobile nav
   sticky: false, // makes nav sticky on scroll (desktop only)
-  position: 'static', // 'static', 'top', 'left', 'right' - when set to 'top', this forces the mobile nav to be placed absolutely on the very top of page
+  position: 'static', // 'static', 'top', 'left', 'right' - when set to 'top', this forces the mobile nav to be placed relatively on the very top of page
   openingSpeed: 250, // how fast the dropdown should open in milliseconds
   closingDelay: 250, // controls how long the dropdowns stay open for in milliseconds
   showArrows: true, // shows dropdown arrows next to the items that have sub menus
@@ -63,7 +63,7 @@ Attribute			| Type				| Default		| Description
 `breakpoint`	| *Integer*		| `768`		| Number in pixels to determine when the nav should turn mobile friendly.
 `menuLabel`	| *String*		| `Menu`		| Label (text) for the mobile nav.
 `sticky`	| *Boolean*		| `false`		| Makes nav sticky on scroll.
-`position`	| *String*		| `static`		| [static, top, left, right] - When set to 'top', this forces the mobile nav to be placed absolutely on the very top of page. When set to 'left' or 'right', mobile nav fades in/out from left or right, accordingly.  
+`position`	| *String*		| `static`		| [static, top, left, right] - When set to 'top', this forces the mobile nav to be placed relatively on the very top of page. When set to 'left' or 'right', mobile nav fades in/out from left or right, accordingly.  
 `openingSpeed`	| *Integer*		| `250`		| Controls how fast the dropdowns open in milliseconds.
 `closingDelay`	| *Integer*		| `250`		| Controls how long the dropdowns stay open for in milliseconds.
 `showArrows`	| *Boolean*		| `true`		| Shows dropdown arrows next to the items that have sub menus.

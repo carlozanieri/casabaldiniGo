@@ -27,7 +27,7 @@ header h2{
     left:50%;
     margin-left:-400px;
     padding:22px 0;
-    position:absolute;
+    position:relative;
     width:540px;
 }
 header a.stuts,a.stuts:visited{
@@ -38,7 +38,7 @@ header a.stuts,a.stuts:visited{
     left:50%;
     line-height:31px;
     margin:23px 0 0 110px;
-    position:absolute;
+    position:relative;
     top:0;
 }
 header .stuts span {

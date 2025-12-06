@@ -60,7 +60,7 @@ html.fp-enabled,
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
-    position: absolute;
+    position: relative;
     z-index: 4;
     top: 50%;
     cursor: pointer;
@@ -118,7 +118,7 @@ html.fp-enabled,
     left: 17px;
 }
 .fp-slidesNav{
-    position: absolute;
+    position: relative;
     z-index: 4;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
@@ -172,7 +172,7 @@ html.fp-enabled,
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     z-index: 1;
     height: 4px;
     width: 4px;
@@ -193,7 +193,7 @@ html.fp-enabled,
     margin: -5px 0px 0px -5px;
 }
 #fp-nav ul li .fp-tooltip {
-    position: absolute;
+    position: relative;
     top: -2px;
     color: #fff;
     font-size: 14px;
@@ -254,7 +254,7 @@ html.fp-enabled,
 
 /*Only display content to screen readers*/
 .fp-sr-only{
-    position: absolute;
+    position: relative;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -305,7 +305,7 @@ Not supports in Firefox and IE */
 .fp-warning,
 .fp-watermark{
     z-index: 9999999;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 .fp-warning,

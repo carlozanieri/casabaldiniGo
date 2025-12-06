@@ -86,7 +86,7 @@ html {
 .submenu {
     left: 0;
     max-height: 0;
-    position: absolute;
+    position: relative;
     top: 100%;
     z-index: 0;
 

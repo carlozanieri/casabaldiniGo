@@ -79,7 +79,7 @@ a:hover {
 
 .column:last-child:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	height: 7px;
 	background: #ceccc6;
 	top: 100px;
