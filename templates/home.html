@@ -18,7 +18,7 @@
 <script type="text/javascript">
 	$( document ).ready(function( $ ) {
 		$( '#example1' ).sliderPro({
-			width: 740,
+			width: 960,
 			height: 500,
 			arrows: true,
 			buttons: false,
@@ -46,15 +46,15 @@
 {{ end }}
 
 {{ define "content_home" }}
-	<div id="example1" class="slider-pro" style= "position: relative;  margin-left: 35%; margin-top: 2.7%; " >
+	<div id="example1" class="slider-pro" style= "position: relative;  margin-left: 15%; margin-top: 2.7%; " >
 		
-		<div class="sp-slides" style= "position: relative;  margin-top: 10.7%;margin-left: 35%; ">
+		<div class="sp-slides" >
 		
 			{{range .Sliders}}
 			
 	        <div class="sp-slide">
 				
-				<img style= "width: 85%; "  src= "/static/img/{{.Codice}}/{{.Img}}" alt="" title="{{.Caption}}" />
+				<img style= "width: 100%; "  src= "/static/img/{{.Codice}}/{{.Img}}" alt="" title="{{.Caption}}" />
 
 				<h3 class="sp-layer sp-black sp-padding" 
 					data-horizontal="40" data-vertical="15%" 
@@ -69,7 +69,7 @@
 				</p>
 
 				<p style="background-color:#330101;" class="sp-layer sp-black sp-padding hide-small-screen" 
-					data-horizontal="40" data-vertical="34%" data-width="650" 
+					data-horizontal="40" data-vertical="22%" data-width="960" 
 					data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="500">
 					{{.Testo}}
 				</p>
