@@ -40,7 +40,7 @@ button:focus {
 }
 
 .hidden {
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	width: 0;
 	height: 0;

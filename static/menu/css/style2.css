@@ -38,7 +38,7 @@ body  {
 }
 
 .bt-overlay {
-	position: relative;
+	position: absolute;
 	width: 100%;
 }
 
@@ -57,7 +57,7 @@ body  {
 }
 
 .bt-menu-trigger span {
-	position: relative;
+	position: absolute;
 	top: 50%;
 	left: 0;
 	display: block;
@@ -82,7 +82,7 @@ body  {
 
 .bt-menu-trigger span:before,
 .bt-menu-trigger span:after {
-	position: relative;
+	position: absolute;
 	left: 0;
 	width: 100%;
 	height: 100%;

@@ -53,7 +53,7 @@ body{
 /* dropdown */
 .dm_multiLevel ul.subMenu {
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
   top: 100%;
   left: 0;
   width: 170%;
@@ -80,7 +80,7 @@ body{
 }
 
 .dm_multiLevel ul.subMenu ul.subMenu{
-  position: relative;
+  position: absolute;
   top: 0;
   left: 100%;
   width: 100%;

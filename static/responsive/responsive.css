@@ -5,7 +5,7 @@ body {
 }
 
 #pushobj {
-	position: relative;
+	position: absolute;
 	top: 0px;
 	left: 30%;
 	color: #500202;

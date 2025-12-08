@@ -1,7 +1,7 @@
 /* Layers
 --------------------------------------------------*/
 .sp-layer {
-	position: relative;
+	position: absolute;
 	margin: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;

@@ -23,7 +23,7 @@
 }
 
 .sp-slide {
-	position: relative;
+	position: absolute;
 }
 
 .sp-image-container {

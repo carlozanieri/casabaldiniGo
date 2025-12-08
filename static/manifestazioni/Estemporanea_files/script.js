@@ -116,7 +116,7 @@ jQuery(function () {
         c.css('height', 'auto');
         var innerHeight = 0;
         jQuery('#art-main').children().each(function() {
-            if (jQuery(this).css('position') != 'relative')
+            if (jQuery(this).css('position') != 'absolute')
                 innerHeight += jQuery(this).outerHeight(true);
         });
         var r = jQuery('#art-main').height() - innerHeight;
