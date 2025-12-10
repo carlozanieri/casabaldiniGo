@@ -41,8 +41,9 @@
 </head>
 {{ define "home" }}
 
-{{ template "base_top" . }}
+
 {{ template "content_home" . }}
+{{ template "base_top" . }}
 {{ template "base_bottom" . }}
 {{ end }}
 
@@ -53,7 +54,7 @@
 		
 			{{range .Sliders}}
 			
-	        <div class="sp-slide" style= "margin-top: 22%; width: 100%; " >
+	        <div class="sp-slide" style= "margin-top: -5%; width: 100%; " >
 				
 				<img style= "width: 100%; "  src= "/static/img/{{.Codice}}/{{.Img}}" alt="" title="{{.Caption}}" />
 
