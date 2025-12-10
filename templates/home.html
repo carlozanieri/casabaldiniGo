@@ -40,19 +40,21 @@
 
 </head>
 {{ define "home" }}
-{{ template "content_home" . }}
+
 {{ template "base_top" . }}
+{{ template "content_home" . }}
+
 {{ template "base_bottom" . }}
 {{ end }}
 
 {{ define "content_home" }}
-	<div id="example1" class="slider-pro" style= "position: relative;  margin-left: 15%; margin-top: -10%; " >
+	<div id="example1" class="slider-pro" style= "position: relative;  margin-left: 15%; margin-top: 2%; " >
 		
 		<div class="sp-slides" >
 		
 			{{range .Sliders}}
 			
-	        <div class="sp-slide" style= "margin-top: 20%; " >
+	        <div class="sp-slide" style= "margin-top: 2%; width: 100%; " >
 				
 				<img style= "width: 100%; "  src= "/static/img/{{.Codice}}/{{.Img}}" alt="" title="{{.Caption}}" />
 
