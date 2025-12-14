@@ -92,8 +92,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	Sliders, _ := GetSliders("index")
 	Menus, _ := GetMenu()
 	Links, _ := GetLinks()
-	//Submenus, _ := []Submenus
-	//Submenus, _ := Menu()
+
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
 		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
@@ -247,6 +246,7 @@ func LecamereHandler(w http.ResponseWriter, r *http.Request) {
 	Menus, _ := GetMenu()
 	Links, _ := GetLinks()
 	//Submenus, _ := Menu()
+
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
 		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
@@ -292,9 +292,10 @@ func LasalaHandler(w http.ResponseWriter, r *http.Request) {
 	Sliders, _ := GetSliders("lasala")
 	Menus, _ := GetMenu()
 	//Submenus, _ := []Submenus
-	//Submenus, _ := Menu()
+	Links, _ := GetLinks()
+
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menus": Menus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -336,10 +337,10 @@ func IlpaeseHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders("ilpaese")
 	Menus, _ := GetMenu()
-	//Submenus, _ := []Submenus
-	//Submenus, _ := Menu()
+	Links, _ := GetLinks()
+
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menus": Menus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//

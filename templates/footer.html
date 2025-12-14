@@ -17,11 +17,11 @@
 {{ define "footer" }}
 
 <footer style="background-image:url(/static/images/patterns/bg.png); background-repeat:repeat;color:#ddd;padding:10px;text-align:center;">
- <span class="flex-container" style=" position: absolute; bottom:10px; background-color: #2c0404;">
+ <span  style=" position: absolute; bottom:10px; margin-right: 18%; margin-left: -30%; background-color: #2c0404;">
 <marquee  direction="right"  width="100%" scrollamount="10" onMouseOver="this.stop()" onMouseOut="this.start()" >
 		{{ range .Links }}
 		
-		<a class="flex-container"style="color:#fff; font-size: 1.5em; margin-left:2%; margin-top:5%; font-weight: bold;" href="{{.Link}}"> <img style="width:{{.Width}}%; height:{{.Height}}%;"  src="/static/img/links/{{.Img}}"  alt=""/>&nbsp; {{.Titolo}} </a>
+		<a class="flex-container" style="color:#fff; font-size: 1.5em; margin-left:2%; margin-top:5%; font-weight: bold;" href="{{.Link}}"> <img   src="/static/img/links/{{.Img}}" width={{.Width}}% height= {{.Height}}% alt=""/>&nbsp; {{.Titolo}} </a>
 			
 		{{ end }} 
 </marquee>
