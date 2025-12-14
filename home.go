@@ -44,6 +44,17 @@ type Menus struct {
 	Link     string
 	Submenus []Submenus
 }
+type Links struct {
+	ID          int
+	Codice      string
+	Img         string
+	Titolo      string
+	Attivo      int
+	Descrizione string
+	Link        string
+	Height      int
+	Width       int
+}
 
 var templates = template.Must(template.ParseGlob("templates/*.html"))
 var codice string
@@ -80,10 +91,11 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders("index")
 	Menus, _ := GetMenu()
+	Links, _ := GetLinks()
 	//Submenus, _ := []Submenus
 	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menus": Menus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -233,10 +245,10 @@ func LecamereHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	Sliders, _ := GetSliders("camere")
 	Menus, _ := GetMenu()
-	//Submenus, _ := []Submenus
+	Links, _ := GetLinks()
 	//Submenus, _ := Menu()
 	templates.ExecuteTemplate(w, "home", map[string]interface{}{
-		"Sliders": Sliders, "Menus": Menus, "data": data,
+		"Sliders": Sliders, "Menus": Menus, "Links": Links, "data": data,
 	})
 	//if err := templates.ExecuteTemplate(w, "home", data); err != nil {
 	//
@@ -336,4 +348,25 @@ func IlpaeseHandler(w http.ResponseWriter, r *http.Request) {
 
 	//}
 
+}
+
+func GetLinks() ([]Links, error) {
+
+	rows, err := db.DB.Query("SELECT id,codice,img,titolo,descrizione,link,attivo,height,width FROM beb_links")
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var links []Links
+
+	for rows.Next() {
+		var l Links
+
+		rows.Scan(&l.ID, &l.Codice, &l.Img, &l.Titolo, &l.Descrizione, &l.Link, &l.Attivo, &l.Height, &l.Width)
+
+		links = append(links, l)
+
+	}
+	return links, nil
 }
